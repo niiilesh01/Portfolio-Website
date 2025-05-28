@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+    <header>
+      <nav>
+        <h1 class="logo">Nilesh Borse</h1>
+        <div class="menu-toggle">&#9776;</div>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Nilesh Borse</h2>
+      <p>
+        I'm passionate about coding and love solving real-world problems through
+        technology. I enjoy building practical, user-focused web applications
+        and constantly exploring new tools and frameworks.
+      </p>
+      <a href="Nilesh_Borse_Resume.pdf" download class="btn">Download Resume</a>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        B.Tech Computer Science student at MPSTME, NMIMS University, graduating
+        in 2026. Passionate about building real-world software solutions with
+        skills in C++, Python, JavaScript, and web technologies like React.js
+        and Firebase. Enjoy tackling challenges with creativity, leadership, and
+        collaboration. Currently working as a Web Development Intern at
+        CollegeTips.in, gaining hands-on experience in full-stack web
+        development and practical coding.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Resume Builder (HTML, CSS, JavaScript, Firebase) - 2025</h3>
+        <p>
+          Engineered a web-based resume builder featuring real-time content
+          preview and predefined template styling. Integrated Firebase for
+          secure user authentication and cloud-based data storage. Enabled users
+          to download completed resumes as formatted PDF documents. This project
+          enhanced my skills in front-end development and cloud services.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Library Management System Database Project - 2024</h3>
+        <p>
+          Designed and implemented a SQL-based Library Management System to
+          streamline book inventory and borrowing records. Applied normalization
+          techniques to ensure data integrity. Improved query speed by 60% and
+          aligned features with real-world library operations, enhancing
+          usability and administrative efficiency.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Chat Messenger (C++) - 2023</h3>
+        <p>
+          Created a terminal-based two-user messaging app with login
+          authentication and time-stamped messages. Utilized file handling for
+          asynchronous communication and designed for sequential real-time
+          messaging simulation. This project sharpened my skills in C++ and
+          systems programming.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <input
+          type="text"
+          id="from_name"
+          name="from_name"
+          placeholder="Your Name"
+          required
+        />
+        <input
+          type="email"
+          id="from_email"
+          name="from_email"
+          placeholder="Your Email"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+
+
+
+    <footer>
+      <p>&copy; 2025 Nilesh Borse</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    (function(){
+      emailjs.init("-iJgUUWXZkFXNLb4K"); // Replace with your actual EmailJS public key
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.send("service_iww4166", "template_d7qoit7", {
+        from_name: document.getElementById("from_name").value,
+        from_email: document.getElementById("from_email").value,
+        message: document.getElementById("message").value
+      }).then(function(response) {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        alert("Failed to send message. Please try again later.");
+        console.error(error);
+      });
+    });
+  </script>
+
+  </body>
+</html>
