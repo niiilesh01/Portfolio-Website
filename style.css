@@ -165,6 +165,21 @@ section p, section ul, section li {
   font-size: 1rem;
   color: #555;
 }
+.project-link {
+  margin-left: 10px;
+  font-size: 14px;
+  padding: 4px 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+}
+
 
 ul {
   padding-left: 20px;
@@ -224,6 +239,7 @@ body.dark {
 body.dark header {
   background-color: #1f1f1f;
   box-shadow: none;
+
 }
 
 body.dark .nav-links li a {
@@ -234,8 +250,13 @@ body.dark .nav-links li a:hover {
   color: #66b2ff;
 }
 
-body.dark .hero h2, 
+body.dark .hero h2 , 
 body.dark section h2 {
+  color: #ccc;
+}
+
+body.dark .hero h3 , 
+body.dark section h3 {
   color: #ccc;
 }
 
