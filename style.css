@@ -165,7 +165,8 @@ section p, section ul, section li {
   font-size: 1rem;
   color: #555;
 }
-.project-link {
+
+.project-link{
   margin-left: 10px;
   font-size: 14px;
   padding: 4px 10px;
@@ -175,8 +176,7 @@ section p, section ul, section li {
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
-
-.project-link:hover {
+.project-link:hover{
   background-color: #0056b3;
 }
 
